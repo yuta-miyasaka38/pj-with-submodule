@@ -2,7 +2,7 @@
 #コンテナ内の初期処理
 
 #vueプロジェクトの立ち上げ
-vue create -d pj
+#vue create -d pj
 
 # #pjフォルダを一階層上に移動(隠しファイル含む)
 # ##gitignoreのnode_moduelsは移動できない
@@ -16,6 +16,9 @@ vue create -d pj
 
 
 #vue起動
+echo "npm install"
+npm install
+
 echo "npm run serve. "
 npm run serve
 
