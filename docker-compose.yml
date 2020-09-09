@@ -1,0 +1,42 @@
+version: "3.7"
+
+volumes:
+    #volumeはローカルにコピー or 表示させないもの
+    ##バイナリファイル（node_module）など、OS依存があるもの
+    
+    #node_moduleを入れるvolume
+    vue-cli-node-volume: 
+
+services:
+    #コンテナ詳細
+    app:
+        image: vuecli:0
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: vuecli
+        ports:
+            - "18080:8080"
+        volumes:
+            #node_moduleを入れるボリューム
+            - vue-cli-node-volume:/app/node_modules
+            
+            #コンテナ内の指定ディレクトリをホスト側と同期
+            - .:/app/
+        
+        #-it
+        stdin_open: true
+        tty: true
+
+
+##コンテナ操作
+##docker exec -it test-vuecli sh
+##(alpine linuxはbashファイルがないため、shファイルを指定)
+
+##http://localhost:18080/
+
+
+
+###終了
+#ctrl+c
+#exit
