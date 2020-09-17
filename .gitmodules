@@ -1,0 +1,9 @@
+[submodule "modal"]
+	path = modal
+	url = https://github.com/yuta-miyasaka38/modal.git
+[submodule "calculator"]
+	path = calculator
+	url = https://github.com/yuta-miyasaka38/calculator.git
+[submodule "textCounter"]
+	path = textCounter
+	url = https://github.com/yuta-miyasaka38/textCounter.git
